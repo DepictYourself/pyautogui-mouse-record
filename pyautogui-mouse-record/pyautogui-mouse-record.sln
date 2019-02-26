@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "pyautogui-mouse-record", "pyautogui-mouse-record\pyautogui-mouse-record.pyproj", "{80B42929-89C0-42C8-8DA9-745E0A932EF5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80B42929-89C0-42C8-8DA9-745E0A932EF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80B42929-89C0-42C8-8DA9-745E0A932EF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7786340B-7E6A-4D50-BCCA-E91C54FB4C65}
+	EndGlobalSection
+EndGlobal
