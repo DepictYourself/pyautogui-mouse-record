@@ -17,13 +17,15 @@ with open(pathDesktop + "/mouse_log.txt", 'r') as inputfile:
             timestr = line[:23] + "000"
             timeobj = datetime.strptime(timestr, "%Y-%m-%d %H:%M:%S,%f")
             deltatime = timeobj - starttime
+            print(deltatime)
             starttime = timeobj
-            dtimesecstr = (str)(deltatime.seconds)
-            dtimemilsec = deltatime.microseconds * 1000
-            dtimemilsecstr = (str)(dtimemilsec).rstrip('0')
+            dtimesec = timedelta.total_seconds(deltatime)
+            dtimesecstr = (str)(dtimesec)
+            print(dtimesecstr)
 
             outputfile.write(command)
 
             # time format
             # timeobj.strftime("%Y-%m-%d %H:%M:%S,%f") + "\n"
-            outputfile.write("time.sleep(" + dtimesecstr + "."+ dtimemilsecstr + ")\n")
+            if(dtimesec > 0.015):
+                outputfile.write("pyautogui.PAUSE = " + dtimesecstr + "\n")
