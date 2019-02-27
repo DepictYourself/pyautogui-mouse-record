@@ -7,10 +7,10 @@ desktop = os.path.expanduser("~/Desktop")
 logging.basicConfig(filename="{0}/mouse_log.txt".format(desktop), level=logging.DEBUG, format="%(asctime)s: %(message)s")
 
 def on_move(x, y):
-    logging.info("pyautogui.moveTo(" + str(x) + ", " + str(y) + ")")
+        logging.info("pyautogui.moveTo(" + str(x) + ", " + str(y) + ")")
 
 def on_click(x, y, button, pressed):
-    logging.info("pyautogui.mouseDown(button='" + str(button)[7:] + "')" if pressed 
+        logging.info("pyautogui.mouseDown(button='" + str(button)[7:] + "')" if pressed 
         else "pyautogui.mouseUp(button='" + str(button)[7:] + "')")
 
 
