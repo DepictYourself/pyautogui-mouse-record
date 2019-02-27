@@ -6,4 +6,4 @@ Create pyautogui scripts with your mouse. This app will register your mouse clic
 1. run pyautogui-mouse-record.py
   (it will save your mouse actions into your desktop as mouse_log.txt )
 2. run log_parser.py
-  (it will output pyautogui_commands.txt )
+  (it will transform the logs into pyautogui commands and output pyautogui_commands.txt )
