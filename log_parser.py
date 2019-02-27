@@ -13,6 +13,7 @@ with open(pathDesktop + "/mouse_log.txt", 'r') as inputfile:
 
         for line in inputfile:            
             command = line[25:]
+            print()
 
             timestr = line[:23] + "000"
             timeobj = datetime.strptime(timestr, "%Y-%m-%d %H:%M:%S,%f")
@@ -23,9 +24,16 @@ with open(pathDesktop + "/mouse_log.txt", 'r') as inputfile:
             dtimesecstr = (str)(dtimesec)
             print(dtimesecstr)
 
-            outputfile.write(command)
+            
 
             # time format
             # timeobj.strftime("%Y-%m-%d %H:%M:%S,%f") + "\n"
-            if(dtimesec > 0.015):
+            if(command[10:16] == "moveTo" and dtimesec > 0.015):
+                outputfile.write(command)
                 outputfile.write("pyautogui.PAUSE = " + dtimesecstr + "\n")
+            else :
+                if (command[10:16] == "moveTo"):
+                    outputfile.write(command)
+                else :
+                    outputfile.write(command)
+                    outputfile.write("pyautogui.PAUSE = " + dtimesecstr + "\n")
